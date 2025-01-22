@@ -1,0 +1,52 @@
+{
+  "name": "vaul-base",
+  "version": "0.0.1",
+  "description": "An unstyled drawer component for React.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Bora",
+    "url": "https://x.com/borabalogluu"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "style.css"
+  ],
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "pnpm type-check && bunchee && pnpm copy-assets",
+    "copy-assets": "cp -r ./src/style.css ./style.css",
+    "dev": "bunchee --watch",
+    "format": "prettier --write .",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc",
+    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "bunchee": "^6.0.4",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@base-ui-components/react": "1.0.0-alpha.5"
+  }
+}
