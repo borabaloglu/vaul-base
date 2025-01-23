@@ -1,8 +1,9 @@
 import React, { useMemo } from "react"
-import { BORDER_RADIUS, TRANSITIONS, WINDOW_TOP_OFFSET } from "@/constants"
-import { useDrawerContext } from "@/context"
 
 import { assignStyle, chain, isVertical } from "@/utils/helpers"
+
+import { BORDER_RADIUS, TRANSITIONS, WINDOW_TOP_OFFSET } from "@/constants"
+import { useDrawerContext } from "@/context"
 
 const noop = () => () => {}
 

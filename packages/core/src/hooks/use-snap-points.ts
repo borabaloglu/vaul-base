@@ -1,9 +1,11 @@
 import React from "react"
-import { TRANSITIONS, VELOCITY_THRESHOLD } from "@/constants"
+
 import { useControlled } from "@/hooks/use-controlled"
-import { DrawerDirection } from "@/types"
 
 import { isVertical, set } from "@/utils/helpers"
+
+import { TRANSITIONS, VELOCITY_THRESHOLD } from "@/constants"
+import { DrawerDirection } from "@/types"
 
 export function useSnapPoints({
   activeSnapPointProp,

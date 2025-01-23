@@ -3,10 +3,6 @@
 import React from "react"
 import { Dialog } from "@base-ui-components/react/dialog"
 
-import { DrawerContext, useDrawerContext } from "./context"
-
-import "./style.css"
-
 import { useControlled } from "@/hooks/use-controlled"
 import { useForkRef } from "@/hooks/use-fork-ref"
 import { usePositionFixed } from "@/hooks/use-position-fixed"
@@ -32,8 +28,11 @@ import {
   TRANSITIONS,
   VELOCITY_THRESHOLD,
   WINDOW_TOP_OFFSET,
-} from "./constants"
-import { DrawerDirection } from "./types"
+} from "@/constants"
+import { DrawerContext, useDrawerContext } from "@/context"
+import { DrawerDirection } from "@/types"
+
+import "@/style.css"
 
 export interface WithFadeFromProps {
   /**
