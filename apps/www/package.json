@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm copy-examples && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "copy-examples": "npx tsx scripts/copy-examples.ts"
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-alpha.5",
