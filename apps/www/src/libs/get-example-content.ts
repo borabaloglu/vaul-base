@@ -15,7 +15,7 @@ export async function getExampleContent(name: string) {
     }
 
     // Production: read from public/e
-    const response = await fetch(`/e/${name}.tsx`, {
+    const response = await fetch(`https://vaul-base.vercel.app/e/${name}.tsx`, {
       cache: "force-cache",
     })
 
