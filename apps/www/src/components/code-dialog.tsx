@@ -1,14 +1,13 @@
-"use client"
-
 import * as React from "react"
 import { Dialog } from "@base-ui-components/react/dialog"
-import { CheckIcon, CopyIcon, XIcon } from "lucide-react"
+import { CheckIcon, CopyIcon, Loader2Icon, XIcon } from "lucide-react"
 import { createHighlighter } from "shiki"
 
 import { Button } from "@/components/button"
 
 import { EXAMPLES } from "@/constants/examples"
 
+import { getExampleContent } from "@/libs/get-example-content"
 import { merge } from "@/libs/utils"
 
 interface CodeDialogProps {
@@ -16,12 +15,21 @@ interface CodeDialogProps {
 }
 
 const CodeDialog = ({ name }: CodeDialogProps) => {
-  const { content } = EXAMPLES[name]
-
+  const [content, setContent] = React.useState<string>("")
   const [code, setCode] = React.useState<string | null>(null)
   const [copied, setCopied] = React.useState(false)
 
   React.useEffect(() => {
+    getExampleContent(name).then((fileContent) => {
+      if (fileContent) {
+        setContent(fileContent)
+      }
+    })
+  }, [name])
+
+  React.useEffect(() => {
+    if (!content) return
+
     async function highlight() {
       const highlighter = await createHighlighter({
         themes: ["github-dark-default"],
@@ -96,6 +104,11 @@ const CodeDialog = ({ name }: CodeDialogProps) => {
                   </Dialog.Close>
                 </div>
               </div>
+              {!code && (
+                <div className="flex h-[300px] items-center justify-center">
+                  <Loader2Icon className="size-6 animate-spin" />
+                </div>
+              )}
               <div
                 className="scrollbar-custom [&>pre]:!bg-bg text-xs [&>pre>code]:!bg-transparent [&>pre]:!m-0 [&>pre]:max-h-[300px] [&>pre]:overflow-auto [&>pre]:p-4"
                 dangerouslySetInnerHTML={{ __html: code! }}

@@ -106,4 +106,20 @@
   .container {
     @apply px-4 md:px-0 max-w-screen-2xl;
   }
+
+  /* Custom Scrollbar Styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--subtle) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--subtle);
+    border-radius: 4px;
+  }
 }

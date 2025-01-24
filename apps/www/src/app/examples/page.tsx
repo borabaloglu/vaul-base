@@ -23,7 +23,7 @@ export default function Examples() {
           </div>
         </header>
 
-        <main className="flex-1">
+        <main className="mb-20 flex-1">
           <div className="container mx-auto">
             <h1 className="text-4xl font-bold">Examples</h1>
             <p className="text-muted-fg mt-4 max-w-2xl">
