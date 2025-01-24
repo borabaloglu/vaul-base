@@ -30,7 +30,8 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "style.css"
+    "style.css",
+    "README.md"
   ],
   "exports": {
     "import": {
@@ -44,8 +45,9 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "build": "pnpm type-check && bunchee && pnpm copy-assets",
+    "build": "pnpm type-check && bunchee && pnpm copy-assets && pnpm copy-readme",
     "copy-assets": "cp -r ./src/style.css ./style.css",
+    "copy-readme": "cp ../../README.md ./README.md",
     "dev": "bunchee --watch",
     "format": "prettier --write .",
     "lint": "eslint . --max-warnings 0"
