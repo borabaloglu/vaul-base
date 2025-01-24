@@ -1,24 +1,29 @@
 "use server"
 
+import fs from "fs/promises"
+import path from "path"
+
 export async function getExampleContent(name: string) {
   try {
-    // Need to use absolute URL for fetch in server components
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : `http://localhost:3000`
+    if (process.env.NODE_ENV === "development") {
+      const filePath = path.join(
+        process.cwd(),
+        "src/components/examples",
+        `${name}.tsx`
+      )
+      return await fs.readFile(filePath, "utf-8")
+    }
 
-    const response = await fetch(`${baseUrl}/e/${name}.tsx`, {
-      // Ensure we're not using cached version during development
-      cache:
-        process.env.NODE_ENV === "development" ? "no-store" : "force-cache",
+    // Production: read from public/e
+    const response = await fetch(`/e/${name}.tsx`, {
+      cache: "force-cache",
     })
 
     if (!response.ok) {
       throw new Error(`Failed to fetch example: ${response.statusText}`)
     }
 
-    const content = await response.text()
-    return content
+    return await response.text()
   } catch (error) {
     console.error("Error fetching example:", error)
     return null
