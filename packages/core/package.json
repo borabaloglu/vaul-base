@@ -10,6 +10,21 @@
     "name": "Bora",
     "url": "https://x.com/borabalogluu"
   },
+  "keywords": [
+    "react",
+    "drawer",
+    "dialog",
+    "modal",
+    "base-ui"
+  ],
+  "homepage": "https://vaul-base.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borabaloglu/vaul-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/borabaloglu/vaul-base/issues"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

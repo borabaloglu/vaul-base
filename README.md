@@ -1,84 +1,46 @@
-# Turborepo starter
+# Vaul Base
 
-This Turborepo starter is maintained by the Turborepo core team.
+![](./static/banner.png)
 
-## Using this example
+[![npm version](https://flat.badgen.net/npm/v/vaul-base?color=green)](https://npmjs.com/package/vaul-base)
+[![npm downloads](https://flat.badgen.net/npm/dm/vaul-base?color=green)](https://npmjs.com/package/vaul-base)
+[![license](https://flat.badgen.net/github/license/borabaloglu/vaul-base?color=green)](https://github.com/borabaloglu/vaul-base/blob/main/LICENSE)
 
-Run the following command:
+Vaul Base is an unstyled drawer component for React, built with Base UI. It serves as a replacement for Dialog on mobile and tablet
+devices. The component utilizes [Base UI's Dialog](https://base-ui.com/react/components/dialog) internally.
 
-```sh
-npx create-turbo@latest
+This is a port of [Vaul](https://vaul.emilkowal.ski/) to Base UI. It's originally created by [Emil Kowalski](https://emilkowal.ski/).
+
+## Usage
+
+To start using Vaul Base, install it in your project:
+
+```bash
+npm install vaul-base
 ```
 
-## What's inside?
+Use the Drawer in your application:
 
-This Turborepo includes the following packages/apps:
+```tsx
+import { Drawer } from "vaul-base"
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+function MyDrawerComponent() {
+  return (
+    <Drawer.Root>
+      <Drawer.Trigger>Open Drawer</Drawer.Trigger>
+      <Drawer.Portal>
+        <Drawer.Overlay />
+        <Drawer.Content>Drawer content</Drawer.Content>
+      </Drawer.Portal>
+    </Drawer.Root>
+  )
+}
 ```
 
-### Develop
+## Examples
 
-To develop all apps and packages, run the following command:
+[Here are additional examples](https://vaul-base.vercel.app/examples) demonstrating the component in use.
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Documentation
 
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+You can use original [Vaul documentation](https://vaul.emilkowal.ski/getting-started) for more information.
