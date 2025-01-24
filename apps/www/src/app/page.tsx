@@ -42,6 +42,7 @@ export default function Home() {
                       href="https://emilkowal.ski/"
                       className="underline underline-offset-4"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Emil Kowalski
                     </a>
@@ -50,6 +51,7 @@ export default function Home() {
                       href="https://x.com/borabalogluu"
                       className="underline underline-offset-4"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Bora Baloglu
                     </a>
@@ -61,6 +63,7 @@ export default function Home() {
                       href="https://base-ui.com/react/components/dialog"
                       className="underline underline-offset-4"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Base UI&apos;s Dialog
                     </a>{" "}
@@ -80,7 +83,7 @@ export default function Home() {
             </Drawer.Portal>
           </Drawer.Root>
         </div>
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <nav className="mt-8 flex items-center justify-center gap-4">
           <Link href="/examples">
             <Button variant="link">Examples</Button>
           </Link>
@@ -95,7 +98,7 @@ export default function Home() {
               <ExternalLink className="size-3.5" />
             </Button>
           </a>
-        </div>
+        </nav>
       </div>
     </div>
   )

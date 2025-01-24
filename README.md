@@ -1,6 +1,6 @@
 # Vaul Base
 
-![](./static/banner.png)
+![](./static/og.jpg)
 
 [![npm version](https://flat.badgen.net/npm/v/vaul-base?color=green)](https://npmjs.com/package/vaul-base)
 [![npm downloads](https://flat.badgen.net/npm/dm/vaul-base?color=green)](https://npmjs.com/package/vaul-base)
