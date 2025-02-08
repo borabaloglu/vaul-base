@@ -1,6 +1,6 @@
 {
   "name": "vaul-base",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An unstyled drawer component for React.",
   "license": "MIT",
   "publishConfig": {
@@ -64,6 +64,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@base-ui-components/react": "1.0.0-alpha.5"
+    "@base-ui-components/react": "1.0.0-alpha.6"
   }
 }
