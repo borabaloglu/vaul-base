@@ -51,8 +51,8 @@ importers:
   apps/www:
     dependencies:
       '@base-ui-components/react':
-        specifier: 1.0.0-alpha.5
-        version: 1.0.0-alpha.5(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.0.0-alpha.8
+        version: 1.0.0-alpha.8(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@vercel/analytics':
         specifier: ^1.4.1
         version: 1.4.1(next@15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -118,8 +118,8 @@ importers:
   packages/core:
     dependencies:
       '@base-ui-components/react':
-        specifier: 1.0.0-alpha.6
-        version: 1.0.0-alpha.6(@types/react@18.3.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 1.0.0-alpha.8
+        version: 1.0.0-alpha.8(@types/react@18.3.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc
         version: 19.0.0
@@ -170,12 +170,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.26.0':
-    resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/runtime@7.26.7':
-    resolution: {integrity: sha512-AOPI3D+a8dXnja+iwsUqGRjr1BbZIe771sXdapOtYI531gSqpi92vXivKcq2asu/DFpdl1ceFAKZyRzK2PCVcQ==}
+  '@babel/runtime@7.27.0':
+    resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.9':
@@ -190,19 +186,8 @@ packages:
     resolution: {integrity: sha512-L6mZmwFDK6Cjh1nRCLXpa6no13ZIioJDz7mdkzHv399pThrTa/k0nUlNaenOeh2kWu/iaOQYElEpKPUswUa9Vg==}
     engines: {node: '>=6.9.0'}
 
-  '@base-ui-components/react@1.0.0-alpha.5':
-    resolution: {integrity: sha512-/hkuXkfiuMZpX1rp1alx2QAah7dUnojgUxtmbEjxYaeS7xiifw9N645ek8e3Dd3QPhVYmDZYfqj/aYUS0IwIqA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      '@types/react': ^17 || ^18 || ^19
-      react: ^17 || ^18 || ^19
-      react-dom: ^17 || ^18 || ^19
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
-  '@base-ui-components/react@1.0.0-alpha.6':
-    resolution: {integrity: sha512-0Jkp8twk3z3TJNOTUyzrK1dPOF7w1/LH+TYksuZc8TyJzuJx8V2O15BgpMJczvFdSR2ncdN1WQxsTe2ayYJ6cw==}
+  '@base-ui-components/react@1.0.0-alpha.8':
+    resolution: {integrity: sha512-tGSksjEjA9TPguCXzFZU2cpvvsE6lnkVWVI0qSk3Zl/jQiE9F6opPVBp1uzHcJou7hj7fr6pEgtNf7WzsiXh4Q==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@types/react': ^17 || ^18 || ^19
@@ -337,8 +322,8 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  '@floating-ui/react@0.27.3':
-    resolution: {integrity: sha512-CLHnes3ixIFFKVQDdICjel8muhFLOBdQH7fgtHNPY8UbCNqbeKZ262G7K66lGQOUQWWnYocf7ZbUsLJgGfsLHg==}
+  '@floating-ui/react@0.27.8':
+    resolution: {integrity: sha512-EQJ4Th328y2wyHR3KzOUOoTW2UKjFk53fmyahfwExnFQ8vnsMYqKc+fFPOkeYtj5tcp1DUMiNJ7BFhed7e9ONw==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -495,17 +480,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@internationalized/date@3.7.0':
-    resolution: {integrity: sha512-VJ5WS3fcVx0bejE/YHfbDKR/yawZgKqn/if+oEeLqNwBtPzVB06olkfcnojTmEMX+gTpH+FlQ69SHNitJ8/erQ==}
+  '@internationalized/date@3.8.0':
+    resolution: {integrity: sha512-J51AJ0fEL68hE4CwGPa6E0PO6JDaVLd8aln48xFCSy7CZkZc96dGEGmLs2OEEbBxcsVZtfrqkXJwI2/MSG8yKw==}
 
-  '@internationalized/message@3.1.6':
-    resolution: {integrity: sha512-JxbK3iAcTIeNr1p0WIFg/wQJjIzJt9l/2KNY/48vXV7GRGZSv3zMxJsce008fZclk2cDC8y0Ig3odceHO7EfNQ==}
+  '@internationalized/message@3.1.7':
+    resolution: {integrity: sha512-gLQlhEW4iO7DEFPf/U7IrIdA3UyLGS0opeqouaFwlMObLUzwexRjbygONHDVbC9G9oFLXsLyGKYkJwqXw/QADg==}
 
-  '@internationalized/number@3.6.0':
-    resolution: {integrity: sha512-PtrRcJVy7nw++wn4W2OuePQQfTqDzfusSuY1QTtui4wa7r+rGVtR75pO8CyKvHvzyQYi3Q1uO5sY0AsB4e65Bw==}
+  '@internationalized/number@3.6.1':
+    resolution: {integrity: sha512-UVsb4bCwbL944E0SX50CHFtWEeZ2uB5VozZ5yDXJdq6iPZsZO5p+bjVMZh2GxHf4Bs/7xtDCcPwEa2NU9DaG/g==}
 
-  '@internationalized/string@3.2.5':
-    resolution: {integrity: sha512-rKs71Zvl2OKOHM+mzAFMIyqR5hI1d1O6BBkMK2/lkfg3fkmVh9Eeg0awcA8W2WqYqDOv6a86DIOlFpggwLtbuw==}
+  '@internationalized/string@3.2.6':
+    resolution: {integrity: sha512-LR2lnM4urJta5/wYJVV7m8qk5DrMZmLRTuFhbQO5b9/sKLHgty6unQy1Li4+Su2DWydmB4aZdS5uxBRXIq2aAw==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -603,70 +588,73 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@react-aria/focus@3.19.1':
-    resolution: {integrity: sha512-bix9Bu1Ue7RPcYmjwcjhB14BMu2qzfJ3tMQLqDc9pweJA66nOw8DThy3IfVr8Z7j2PHktOLf9kcbiZpydKHqzg==}
+  '@react-aria/focus@3.20.2':
+    resolution: {integrity: sha512-Q3rouk/rzoF/3TuH6FzoAIKrl+kzZi9LHmr8S5EqLAOyP9TXIKG34x2j42dZsAhrw7TbF9gA8tBKwnCNH4ZV+Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/i18n@3.12.5':
-    resolution: {integrity: sha512-ooeop2pTG94PuaHoN2OTk2hpkqVuoqgEYxRvnc1t7DVAtsskfhS/gVOTqyWGsxvwAvRi7m/CnDu6FYdeQ/bK5w==}
+  '@react-aria/i18n@3.12.8':
+    resolution: {integrity: sha512-V/Nau9WuwTwxfFffQL4URyKyY2HhRlu9zmzkF2Hw/j5KmEQemD+9jfaLueG2CJu85lYL06JrZXUdnhZgKnqMkA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/interactions@3.23.0':
-    resolution: {integrity: sha512-0qR1atBIWrb7FzQ+Tmr3s8uH5mQdyRH78n0krYaG8tng9+u1JlSi8DGRSaC9ezKyNB84m7vHT207xnHXGeJ3Fg==}
+  '@react-aria/interactions@3.25.0':
+    resolution: {integrity: sha512-GgIsDLlO8rDU/nFn6DfsbP9rfnzhm8QFjZkB9K9+r+MTSCn7bMntiWQgMM+5O6BiA8d7C7x4zuN4bZtc0RBdXQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/overlays@3.25.0':
-    resolution: {integrity: sha512-UEqJJ4duowrD1JvwXpPZreBuK79pbyNjNxFUVpFSskpGEJe3oCWwsSDKz7P1O7xbx5OYp+rDiY8fk/sE5rkaKw==}
+  '@react-aria/overlays@3.27.0':
+    resolution: {integrity: sha512-2vZVgL7FrloN5Rh8sAhadGADJbuWg69DdSJB3fd2/h5VvcEhnIfNPu9Ma5XmdkApDoTboIEsKZ4QLYwRl98w6w==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/ssr@3.9.7':
-    resolution: {integrity: sha512-GQygZaGlmYjmYM+tiNBA5C6acmiDWF52Nqd40bBp0Znk4M4hP+LTmI0lpI1BuKMw45T8RIhrAsICIfKwZvi2Gg==}
+  '@react-aria/ssr@3.9.8':
+    resolution: {integrity: sha512-lQDE/c9uTfBSDOjaZUJS8xP2jCKVk4zjQeIlCH90xaLhHDgbpCdns3xvFpJJujfj3nI4Ll9K7A+ONUBDCASOuw==}
     engines: {node: '>= 12'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/utils@3.27.0':
-    resolution: {integrity: sha512-p681OtApnKOdbeN8ITfnnYqfdHS0z7GE+4l8EXlfLnr70Rp/9xicBO6d2rU+V/B3JujDw2gPWxYKEnEeh0CGCw==}
+  '@react-aria/utils@3.28.2':
+    resolution: {integrity: sha512-J8CcLbvnQgiBn54eeEvQQbIOfBF3A1QizxMw9P4cl9MkeR03ug7RnjTIdJY/n2p7t59kLeAB3tqiczhcj+Oi5w==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-aria/visually-hidden@3.8.19':
-    resolution: {integrity: sha512-MZgCCyQ3sdG94J5iJz7I7Ai3IxoN0U5d/+EaUnA1mfK7jf2fSYQBqi6Eyp8sWUYzBTLw4giXB5h0RGAnWzk9hA==}
+  '@react-aria/visually-hidden@3.8.22':
+    resolution: {integrity: sha512-EO3R8YTKZ7HkLl9k1Y2uBKYBgpJagth4/4W7mfpJZE24A3fQnCP8zx1sweXiAm0mirR4J6tNaK7Ia8ssP5TpOw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-stately/overlays@3.6.13':
-    resolution: {integrity: sha512-WsU85Gf/b+HbWsnnYw7P/Ila3wD+C37Uk/WbU4/fHgJ26IEOWsPE6wlul8j54NZ1PnLNhV9Fn+Kffi+PaJMQXQ==}
+  '@react-stately/flags@3.1.1':
+    resolution: {integrity: sha512-XPR5gi5LfrPdhxZzdIlJDz/B5cBf63l4q6/AzNqVWFKgd0QqY5LvWJftXkklaIUpKSJkIKQb8dphuZXDtkWNqg==}
+
+  '@react-stately/overlays@3.6.15':
+    resolution: {integrity: sha512-LBaGpXuI+SSd5HSGzyGJA0Gy09V2tl2G/r0lllTYqwt0RDZR6p7IrhdGVXZm6vI0oWEnih7yLC32krkVQrffgQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-stately/utils@3.10.5':
-    resolution: {integrity: sha512-iMQSGcpaecghDIh3mZEpZfoFH3ExBwTtuBEcvZ2XnGzCgQjeYXcMdIUwAfVQLXFTdHUHGF6Gu6/dFrYsCzySBQ==}
+  '@react-stately/utils@3.10.6':
+    resolution: {integrity: sha512-O76ip4InfTTzAJrg8OaZxKU4vvjMDOpfA/PGNOytiXwBbkct2ZeZwaimJ8Bt9W1bj5VsZ81/o/tW4BacbdDOMA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-types/button@3.10.2':
-    resolution: {integrity: sha512-h8SB/BLoCgoBulCpyzaoZ+miKXrolK9XC48+n1dKJXT8g4gImrficurDW6+PRTQWaRai0Q0A6bu8UibZOU4syg==}
+  '@react-types/button@3.12.0':
+    resolution: {integrity: sha512-YrASNa+RqGQpzJcxNAahzNuTYVID1OE6HCorrEOXIyGS3EGogHsQmFs9OyThXnGHq6q4rLlA806/jWbP9uZdxA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-types/overlays@3.8.12':
-    resolution: {integrity: sha512-ZvR1t0YV7/6j+6OD8VozKYjvsXT92+C/2LOIKozy7YUNS5KI4MkXbRZzJvkuRECVZOmx8JXKTUzhghWJM/3QuQ==}
+  '@react-types/overlays@3.8.14':
+    resolution: {integrity: sha512-XJS67KHYhdMvPNHXNGdmc85gE+29QT5TwC58V4kxxHVtQh9fYzEEPzIV8K84XWSz04rRGe3fjDgRNbcqBektWQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-types/shared@3.27.0':
-    resolution: {integrity: sha512-gvznmLhi6JPEf0bsq7SwRYTHAKKq/wcmKqFez9sRdbED+SPMUmK5omfZ6w3EwUFQHbYUa4zPBYedQ7Knv70RMw==}
+  '@react-types/shared@3.29.0':
+    resolution: {integrity: sha512-IDQYu/AHgZimObzCFdNl1LpZvQW/xcfLt3v20sorl5qRucDVj4S9os98sVTZ4IRIBjmS+MkjqpR5E70xan7ooA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
@@ -2982,8 +2970,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  use-sync-external-store@1.4.0:
-    resolution: {integrity: sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==}
+  use-sync-external-store@1.5.0:
+    resolution: {integrity: sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -3094,11 +3082,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.5
 
-  '@babel/runtime@7.26.0':
-    dependencies:
-      regenerator-runtime: 0.14.1
-
-  '@babel/runtime@7.26.7':
+  '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -3125,29 +3109,29 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@base-ui-components/react@1.0.0-alpha.5(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@base-ui-components/react@1.0.0-alpha.8(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.26.0
-      '@floating-ui/react': 0.27.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@babel/runtime': 7.27.0
+      '@floating-ui/react': 0.27.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@floating-ui/utils': 0.2.9
-      '@react-aria/overlays': 3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/overlays': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       prop-types: 15.8.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      use-sync-external-store: 1.4.0(react@18.3.1)
+      use-sync-external-store: 1.5.0(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.1
 
-  '@base-ui-components/react@1.0.0-alpha.6(@types/react@18.3.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@base-ui-components/react@1.0.0-alpha.8(@types/react@18.3.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@babel/runtime': 7.26.7
-      '@floating-ui/react': 0.27.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@babel/runtime': 7.27.0
+      '@floating-ui/react': 0.27.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@floating-ui/utils': 0.2.9
-      '@react-aria/overlays': 3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/overlays': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       prop-types: 15.8.1
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-      use-sync-external-store: 1.4.0(react@19.0.0)
+      use-sync-external-store: 1.5.0(react@19.0.0)
     optionalDependencies:
       '@types/react': 18.3.1
 
@@ -3333,7 +3317,7 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@floating-ui/react@0.27.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@floating-ui/react@0.27.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@floating-ui/utils': 0.2.9
@@ -3341,7 +3325,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       tabbable: 6.2.0
 
-  '@floating-ui/react@0.27.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@floating-ui/react@0.27.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@floating-ui/utils': 0.2.9
@@ -3476,20 +3460,20 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@internationalized/date@3.7.0':
+  '@internationalized/date@3.8.0':
     dependencies:
       '@swc/helpers': 0.5.15
 
-  '@internationalized/message@3.1.6':
+  '@internationalized/message@3.1.7':
     dependencies:
       '@swc/helpers': 0.5.15
       intl-messageformat: 10.7.14
 
-  '@internationalized/number@3.6.0':
+  '@internationalized/number@3.6.1':
     dependencies:
       '@swc/helpers': 0.5.15
 
-  '@internationalized/string@3.2.5':
+  '@internationalized/string@3.2.6':
     dependencies:
       '@swc/helpers': 0.5.15
 
@@ -3566,199 +3550,207 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@react-aria/focus@3.19.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/focus@3.20.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.23.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/utils': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-aria/interactions': 3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/utils': 3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       clsx: 2.1.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/focus@3.19.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/focus@3.20.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@react-aria/interactions': 3.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/utils': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-aria/interactions': 3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       clsx: 2.1.1
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-aria/i18n@3.12.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/i18n@3.12.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@internationalized/date': 3.7.0
-      '@internationalized/message': 3.1.6
-      '@internationalized/number': 3.6.0
-      '@internationalized/string': 3.2.5
-      '@react-aria/ssr': 3.9.7(react@18.3.1)
-      '@react-aria/utils': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@internationalized/date': 3.8.0
+      '@internationalized/message': 3.1.7
+      '@internationalized/number': 3.6.1
+      '@internationalized/string': 3.2.6
+      '@react-aria/ssr': 3.9.8(react@18.3.1)
+      '@react-aria/utils': 3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/i18n@3.12.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/i18n@3.12.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.7.0
-      '@internationalized/message': 3.1.6
-      '@internationalized/number': 3.6.0
-      '@internationalized/string': 3.2.5
-      '@react-aria/ssr': 3.9.7(react@19.0.0)
-      '@react-aria/utils': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@internationalized/date': 3.8.0
+      '@internationalized/message': 3.1.7
+      '@internationalized/number': 3.6.1
+      '@internationalized/string': 3.2.6
+      '@react-aria/ssr': 3.9.8(react@19.0.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-aria/interactions@3.23.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/interactions@3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@react-aria/ssr': 3.9.7(react@18.3.1)
-      '@react-aria/utils': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-aria/ssr': 3.9.8(react@18.3.1)
+      '@react-aria/utils': 3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/flags': 3.1.1
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/interactions@3.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/interactions@3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@react-aria/ssr': 3.9.7(react@19.0.0)
-      '@react-aria/utils': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-aria/ssr': 3.9.8(react@19.0.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-stately/flags': 3.1.1
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-aria/overlays@3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/overlays@3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@react-aria/focus': 3.19.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/i18n': 3.12.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/interactions': 3.23.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/ssr': 3.9.7(react@18.3.1)
-      '@react-aria/utils': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-stately/overlays': 3.6.13(react@18.3.1)
-      '@react-types/button': 3.10.2(react@18.3.1)
-      '@react-types/overlays': 3.8.12(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-aria/focus': 3.20.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/i18n': 3.12.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/interactions': 3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/ssr': 3.9.8(react@18.3.1)
+      '@react-aria/utils': 3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.22(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/overlays': 3.6.15(react@18.3.1)
+      '@react-types/button': 3.12.0(react@18.3.1)
+      '@react-types/overlays': 3.8.14(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/overlays@3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/overlays@3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@react-aria/focus': 3.19.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/i18n': 3.12.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/interactions': 3.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/ssr': 3.9.7(react@19.0.0)
-      '@react-aria/utils': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/visually-hidden': 3.8.19(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-stately/overlays': 3.6.13(react@19.0.0)
-      '@react-types/button': 3.10.2(react@19.0.0)
-      '@react-types/overlays': 3.8.12(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-aria/focus': 3.20.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/i18n': 3.12.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/interactions': 3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/ssr': 3.9.8(react@19.0.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/visually-hidden': 3.8.22(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-stately/overlays': 3.6.15(react@19.0.0)
+      '@react-types/button': 3.12.0(react@19.0.0)
+      '@react-types/overlays': 3.8.14(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-aria/ssr@3.9.7(react@18.3.1)':
+  '@react-aria/ssr@3.9.8(react@18.3.1)':
     dependencies:
       '@swc/helpers': 0.5.15
       react: 18.3.1
 
-  '@react-aria/ssr@3.9.7(react@19.0.0)':
+  '@react-aria/ssr@3.9.8(react@19.0.0)':
     dependencies:
       '@swc/helpers': 0.5.15
       react: 19.0.0
 
-  '@react-aria/utils@3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/utils@3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@react-aria/ssr': 3.9.7(react@18.3.1)
-      '@react-stately/utils': 3.10.5(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-aria/ssr': 3.9.8(react@18.3.1)
+      '@react-stately/flags': 3.1.1
+      '@react-stately/utils': 3.10.6(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       clsx: 2.1.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/utils@3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/utils@3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@react-aria/ssr': 3.9.7(react@19.0.0)
-      '@react-stately/utils': 3.10.5(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-aria/ssr': 3.9.8(react@19.0.0)
+      '@react-stately/flags': 3.1.1
+      '@react-stately/utils': 3.10.6(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       clsx: 2.1.1
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-aria/visually-hidden@3.8.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-aria/visually-hidden@3.8.22(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.23.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-aria/utils': 3.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-aria/interactions': 3.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/utils': 3.28.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       '@swc/helpers': 0.5.15
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@react-aria/visually-hidden@3.8.19(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-aria/visually-hidden@3.8.22(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@react-aria/interactions': 3.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-aria/utils': 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-aria/interactions': 3.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       '@swc/helpers': 0.5.15
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@react-stately/overlays@3.6.13(react@18.3.1)':
+  '@react-stately/flags@3.1.1':
     dependencies:
-      '@react-stately/utils': 3.10.5(react@18.3.1)
-      '@react-types/overlays': 3.8.12(react@18.3.1)
+      '@swc/helpers': 0.5.15
+
+  '@react-stately/overlays@3.6.15(react@18.3.1)':
+    dependencies:
+      '@react-stately/utils': 3.10.6(react@18.3.1)
+      '@react-types/overlays': 3.8.14(react@18.3.1)
       '@swc/helpers': 0.5.15
       react: 18.3.1
 
-  '@react-stately/overlays@3.6.13(react@19.0.0)':
+  '@react-stately/overlays@3.6.15(react@19.0.0)':
     dependencies:
-      '@react-stately/utils': 3.10.5(react@19.0.0)
-      '@react-types/overlays': 3.8.12(react@19.0.0)
+      '@react-stately/utils': 3.10.6(react@19.0.0)
+      '@react-types/overlays': 3.8.14(react@19.0.0)
       '@swc/helpers': 0.5.15
       react: 19.0.0
 
-  '@react-stately/utils@3.10.5(react@18.3.1)':
+  '@react-stately/utils@3.10.6(react@18.3.1)':
     dependencies:
       '@swc/helpers': 0.5.15
       react: 18.3.1
 
-  '@react-stately/utils@3.10.5(react@19.0.0)':
+  '@react-stately/utils@3.10.6(react@19.0.0)':
     dependencies:
       '@swc/helpers': 0.5.15
       react: 19.0.0
 
-  '@react-types/button@3.10.2(react@18.3.1)':
+  '@react-types/button@3.12.0(react@18.3.1)':
     dependencies:
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       react: 18.3.1
 
-  '@react-types/button@3.10.2(react@19.0.0)':
+  '@react-types/button@3.12.0(react@19.0.0)':
     dependencies:
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       react: 19.0.0
 
-  '@react-types/overlays@3.8.12(react@18.3.1)':
+  '@react-types/overlays@3.8.14(react@18.3.1)':
     dependencies:
-      '@react-types/shared': 3.27.0(react@18.3.1)
+      '@react-types/shared': 3.29.0(react@18.3.1)
       react: 18.3.1
 
-  '@react-types/overlays@3.8.12(react@19.0.0)':
+  '@react-types/overlays@3.8.14(react@19.0.0)':
     dependencies:
-      '@react-types/shared': 3.27.0(react@19.0.0)
+      '@react-types/shared': 3.29.0(react@19.0.0)
       react: 19.0.0
 
-  '@react-types/shared@3.27.0(react@18.3.1)':
+  '@react-types/shared@3.29.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
-  '@react-types/shared@3.27.0(react@19.0.0)':
+  '@react-types/shared@3.29.0(react@19.0.0)':
     dependencies:
       react: 19.0.0
 
@@ -4763,7 +4755,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.21.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.18.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.21.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -4785,7 +4777,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.18.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.21.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.18.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.21.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -6438,11 +6430,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-sync-external-store@1.4.0(react@18.3.1):
+  use-sync-external-store@1.5.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
-  use-sync-external-store@1.4.0(react@19.0.0):
+  use-sync-external-store@1.5.0(react@19.0.0):
     dependencies:
       react: 19.0.0
 

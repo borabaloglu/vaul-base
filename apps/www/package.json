@@ -10,7 +10,7 @@
     "copy-examples": "npx tsx scripts/copy-examples.ts"
   },
   "dependencies": {
-    "@base-ui-components/react": "1.0.0-alpha.5",
+    "@base-ui-components/react": "1.0.0-alpha.8",
     "@vercel/analytics": "^1.4.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

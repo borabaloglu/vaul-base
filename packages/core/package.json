@@ -54,7 +54,8 @@
   },
   "peerDependencies": {
     "react": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc",
-    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc"
+    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc",
+    "@base-ui-components/react": "1.0.0-alpha.8"
   },
   "devDependencies": {
     "@types/node": "^22.10.7",
@@ -63,7 +64,5 @@
     "bunchee": "^6.0.4",
     "typescript": "^5.3.3"
   },
-  "dependencies": {
-    "@base-ui-components/react": "1.0.0-alpha.6"
-  }
+  "dependencies": {}
 }
