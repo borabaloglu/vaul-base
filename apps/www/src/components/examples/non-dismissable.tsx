@@ -12,8 +12,8 @@ const NonDismissableDrawer = () => {
         render={(props) => <Button {...props}>Open Drawer</Button>}
       />
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/70" />
-        <Drawer.Content className="bg-bg text-fg border-muted fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
+        <Drawer.Overlay className="fixed inset-0 bg-black/80" />
+        <Drawer.Content className="bg-background text-foreground fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
           <div className="mx-auto flex h-full max-w-sm flex-col justify-center space-y-4 px-4">
             <h4 className="font-semibold">Non-dismissible Drawer</h4>
             <p>

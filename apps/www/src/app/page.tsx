@@ -16,7 +16,7 @@ export default function Home() {
         <div className="mt-20 flex flex-col items-center justify-center">
           <Logo className="size-24" />
           <h1 className="mt-8 text-4xl font-bold">Vaul Base</h1>
-          <p className="text-muted-fg mt-4 w-2/3 text-center sm:w-full">
+          <p className="text-muted-foreground mt-4 w-2/3 text-center sm:w-full">
             An unstyled drawer component for React, built with Base UI.
           </p>
         </div>
@@ -26,9 +26,9 @@ export default function Home() {
               render={(props) => <Button {...props}>Open Drawer</Button>}
             />
             <Drawer.Portal>
-              <Drawer.Overlay className="fixed inset-0 bg-black/40" />
-              <Drawer.Content className="bg-bg text-fg border-muted fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
-                <Drawer.Handle className="bg-muted-fg top-4 h-1 w-10 rounded-full" />
+              <Drawer.Overlay className="fixed inset-0 bg-black/80" />
+              <Drawer.Content className="bg-background fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
+                <Drawer.Handle className="top-4" />
                 <div className="mx-auto flex h-full max-w-sm flex-col justify-center space-y-4 px-4">
                   <h4 className="font-semibold">Drawer component for React</h4>
                   <p>

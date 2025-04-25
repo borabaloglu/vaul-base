@@ -9,17 +9,17 @@ export const ScrollableDrawer = () => {
         render={(props) => <Button {...props}>Open Drawer</Button>}
       />
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/70" />
-        <Drawer.Content className="bg-bg text-fg border-muted fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
-          <Drawer.Handle className="bg-muted-fg top-4 h-1 w-10 rounded-full" />
+        <Drawer.Overlay className="fixed inset-0 bg-black/80" />
+        <Drawer.Content className="bg-background fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
+          <Drawer.Handle className="top-4" />
           <div className="mx-auto mt-10 flex h-full max-w-sm flex-col space-y-4 overflow-y-auto px-4 pb-16">
             <h4 className="font-semibold">The 7-Minute Conversation</h4>
             <p>
-              The <span className="text-primary font-semibold">6:47 AM</span>{" "}
-              train to London was unusually quiet that morning. Sarah counted
-              only four other passengers in her car, all of them hidden behind
-              newspapers or phones. She had seven minutes until her stop, just
-              enough time to review her presentation one last time.
+              The <span className="font-semibold">6:47 AM</span> train to London
+              was unusually quiet that morning. Sarah counted only four other
+              passengers in her car, all of them hidden behind newspapers or
+              phones. She had seven minutes until her stop, just enough time to
+              review her presentation one last time.
               <br />
               <br />
               That's when he sat down across from her. Mid-thirties, wearing a
@@ -43,9 +43,8 @@ export const ScrollableDrawer = () => {
               <br />
               <br />
               Sarah checked her watch.{" "}
-              <span className="text-primary font-semibold">6:48 AM</span>. Six
-              minutes left. She could give a polite nod and return to her
-              presentation, or...
+              <span className="font-semibold">6:48 AM</span>. Six minutes left.
+              She could give a polite nod and return to her presentation, or...
               <br />
               <br />
               <span className="italic">"What happened to it?"</span> she found
@@ -66,9 +65,8 @@ export const ScrollableDrawer = () => {
               </span>
               <br />
               <br />
-              <span className="text-primary font-semibold">6:49 AM</span>. Sarah
-              closed her laptop. Her own corner office suddenly felt less
-              important.
+              <span className="font-semibold">6:49 AM</span>. Sarah closed her
+              laptop. Her own corner office suddenly felt less important.
               <br />
               <br />
               <span className="italic">"I have a peace lily too,"</span> she
@@ -94,8 +92,8 @@ export const ScrollableDrawer = () => {
               </span>
               <br />
               <br />
-              <span className="text-primary font-semibold">6:50 AM</span>. They
-              shared a moment of understanding that felt deeper than their brief
+              <span className="font-semibold">6:50 AM</span>. They shared a
+              moment of understanding that felt deeper than their brief
               acquaintance should allow.
               <br />
               <br />
@@ -115,7 +113,7 @@ export const ScrollableDrawer = () => {
               <span className="italic">"More dying plants?"</span>
               <br />
               <br />
-              <span className="text-primary font-semibold">6:51 AM</span>.{" "}
+              <span className="font-semibold">6:51 AM</span>.{" "}
               <span className="italic">"You know,"</span> he said,{" "}
               <span className="italic">
                 "my mother doesn't just save plants. She makes this incredible
@@ -135,7 +133,7 @@ export const ScrollableDrawer = () => {
               <span className="italic">"Too long,"</span> she admitted.
               <br />
               <br />
-              <span className="text-primary font-semibold">6:52 AM</span>.{" "}
+              <span className="font-semibold">6:52 AM</span>.{" "}
               <span className="italic">"Sometimes I wonder,"</span> he mused,{" "}
               <span className="italic">
                 "if we've got it all backwards. We spend our lives chasing
@@ -151,7 +149,7 @@ export const ScrollableDrawer = () => {
               <span className="italic">"What will you do now?"</span> she asked.
               <br />
               <br />
-              <span className="text-primary font-semibold">6:53 AM</span>.{" "}
+              <span className="font-semibold">6:53 AM</span>.{" "}
               <span className="italic">
                 "Start small. Save this plant. Make pancakes. Read stories."
               </span>{" "}
@@ -167,9 +165,9 @@ export const ScrollableDrawer = () => {
               about corner offices, about peace lilies and pancakes.
               <br />
               <br />
-              <span className="text-primary font-semibold">6:54 AM</span>. The
-              train stopped. Sarah stood up, but instead of picking up her
-              laptop, she pulled out a business card.
+              <span className="font-semibold">6:54 AM</span>. The train stopped.
+              Sarah stood up, but instead of picking up her laptop, she pulled
+              out a business card.
               <br />
               <br />
               <span className="italic">
@@ -189,7 +187,7 @@ export const ScrollableDrawer = () => {
               had just enough time to email her boss before the morning meeting:
               <br />
               <br />
-              <span className="text-primary font-medium">
+              <span className="font-medium">
                 "Need to reschedule presentation. Family emergency. It's about a
                 peace lily."
               </span>

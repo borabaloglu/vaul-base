@@ -9,9 +9,9 @@ const NestedDrawer = () => {
         render={(props) => <Button {...props}>Open Drawer</Button>}
       />
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/70" />
-        <Drawer.Content className="bg-bg text-fg border-muted fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
-          <Drawer.Handle className="bg-muted-fg top-4 h-1 w-10 rounded-full" />
+        <Drawer.Overlay className="fixed inset-0 bg-black/80" />
+        <Drawer.Content className="bg-background text-foreground fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
+          <Drawer.Handle className="top-4" />
           <div className="mx-auto flex h-full max-w-sm flex-col justify-center space-y-4 px-4">
             <h4 className="font-semibold">Nested Drawers</h4>
             <p>
@@ -25,9 +25,9 @@ const NestedDrawer = () => {
                 )}
               />
               <Drawer.Portal>
-                <Drawer.Overlay className="fixed inset-0 bg-black/70" />
-                <Drawer.Content className="bg-bg text-fg border-muted fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
-                  <Drawer.Handle className="bg-muted-fg top-4 h-1 w-10 rounded-full" />
+                <Drawer.Overlay className="fixed inset-0 bg-black/80" />
+                <Drawer.Content className="bg-background text-foreground fixed inset-x-0 bottom-0 h-[70vh] w-full rounded-t-lg border">
+                  <Drawer.Handle className="top-4" />
                   <div className="mx-auto flex h-full max-w-sm flex-col justify-center space-y-4 px-4">
                     <p>
                       To create a nested drawer, simply place a{" "}

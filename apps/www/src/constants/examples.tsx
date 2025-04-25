@@ -5,6 +5,7 @@ import NonDismissableDrawer from "@/components/examples/non-dismissable"
 import ScaledBackgroundDrawer from "@/components/examples/scaled-background"
 import { ScrollableDrawer } from "@/components/examples/scrollable"
 import SnapPointsDrawer from "@/components/examples/snap-points"
+import WithInputDrawer from "@/components/examples/with-input"
 
 export const EXAMPLES = {
   basic: {
@@ -43,5 +44,10 @@ export const EXAMPLES = {
     name: "Non-Dismissable",
     description: "Drawer that cannot be dismissed.",
     render: () => <NonDismissableDrawer />,
+  },
+  "with-input": {
+    name: "Input",
+    description: "Drawer with an input field.",
+    render: () => <WithInputDrawer />,
   },
 }

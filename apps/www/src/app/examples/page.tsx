@@ -26,7 +26,7 @@ export default function Examples() {
         <main className="mb-20 flex-1">
           <div className="container mx-auto">
             <h1 className="text-4xl font-bold">Examples</h1>
-            <p className="text-muted-fg mt-4 max-w-2xl">
+            <p className="text-muted-foreground mt-4 max-w-2xl">
               Explore different implementations and use cases of the Vaul Base
               drawer component.
             </p>
@@ -35,10 +35,10 @@ export default function Examples() {
               {Object.entries(EXAMPLES).map(([key, example]) => (
                 <div
                   key={key}
-                  className="border-muted bg-subtle/50 flex flex-col rounded-lg border p-6"
+                  className="bg-card flex flex-col rounded-md border p-6"
                 >
                   <h2 className="font-semibold">{example.name}</h2>
-                  <p className="text-muted-fg mb-6 mt-2">
+                  <p className="text-muted-foreground mb-6 mt-2">
                     {example.description}
                   </p>
                   <div className="mt-auto flex gap-4">

@@ -67,7 +67,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://vaul-base.vercel.app" />
         <meta name="theme-color" content={META_THEME_COLOR} />
       </head>
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${geistSans.variable}`}>
         <main className="Root" data-vaul-drawer-wrapper="">
           <div className="container mx-auto">{children}</div>
         </main>
