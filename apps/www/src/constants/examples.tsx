@@ -2,6 +2,7 @@ import BasicDrawer from "@/components/examples/basic"
 import DirectionsDrawer from "@/components/examples/directions"
 import NestedDrawer from "@/components/examples/nested"
 import NonDismissableDrawer from "@/components/examples/non-dismissable"
+import ResponsiveDrawer from "@/components/examples/responsive"
 import ScaledBackgroundDrawer from "@/components/examples/scaled-background"
 import { ScrollableDrawer } from "@/components/examples/scrollable"
 import SnapPointsDrawer from "@/components/examples/snap-points"
@@ -23,6 +24,11 @@ export const EXAMPLES = {
     name: "Directions",
     description: "Drawers can be opened from different sides of the screen.",
     render: () => <DirectionsDrawer />,
+  },
+    responsive: {
+    name: "Responsive",
+    description: "Changing drawer direction based on screen size.",
+    render: () => <ResponsiveDrawer />,
   },
   "scaled-background": {
     name: "Scaled Background",

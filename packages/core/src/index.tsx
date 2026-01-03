@@ -13,6 +13,7 @@ import { useSnapPoints } from "@/hooks/use-snap-points"
 import { isIOS, isMobileFirefox } from "@/utils/browser"
 import {
   dampenValue,
+  getTransform,
   getTranslate,
   isVertical,
   reset,
@@ -115,7 +116,7 @@ export type DialogProps = {
    * Direction of the drawer. Can be `top` or `bottom`, `left`, `right`.
    * @default 'bottom'
    */
-  direction?: "top" | "bottom" | "left" | "right"
+  direction?: "top" | "bottom" | "left" | "right" | "center"
   /**
    * Opened by default, skips initial enter animation. Still reacts to `open` state changes
    * @default false
@@ -287,6 +288,7 @@ export function Root({
   }
 
   function onPress(event: React.PointerEvent<HTMLDivElement>) {
+    if (direction === "center") return
     if (!dismissible && !snapPoints) return
     if (drawerRef.current && !drawerRef.current.contains(event.target as Node))
       return
@@ -332,7 +334,11 @@ export function Root({
       return false
     }
 
-    if (direction === "right" || direction === "left") {
+    if (
+      direction === "right" ||
+      direction === "left" ||
+      direction === "top"
+    ) {
       return true
     }
 
@@ -466,10 +472,17 @@ export function Root({
 
         const translateValue =
           Math.min(dampenedDraggedDistance * -1, 0) * directionMultiplier
+
+        const transformValue =
+          direction === "left" || direction === "top"
+            ? `calc(100% + ${translateValue}px)`
+            : `${translateValue}px`
+
+        const x = isVertical(direction) ? "50%" : transformValue
+        const y = isVertical(direction) ? transformValue : "50%"
+
         set(drawerRef.current, {
-          transform: isVertical(direction)
-            ? `translate3d(0, ${translateValue}px, 0)`
-            : `translate3d(${translateValue}px, 0, 0)`,
+          transform: getTransform(direction, translateValue),
         })
         return
       }
@@ -518,10 +531,16 @@ export function Root({
       if (!snapPoints) {
         const translateValue = absDraggedDistance * directionMultiplier
 
+        const transformValue =
+          direction === "left" || direction === "top"
+            ? `calc(100% + ${translateValue}px)`
+            : `${translateValue}px`
+
+        const x = isVertical(direction) ? "50%" : transformValue
+        const y = isVertical(direction) ? transformValue : "50%"
+
         set(drawerRef.current, {
-          transform: isVertical(direction)
-            ? `translate3d(0, ${translateValue}px, 0)`
-            : `translate3d(${translateValue}px, 0, 0)`,
+          transform: getTransform(direction, translateValue),
         })
       }
     }
@@ -626,8 +645,14 @@ export function Root({
     const wrapper = document.querySelector("[data-vaul-drawer-wrapper]")
     const currentSwipeAmount = getTranslate(drawerRef.current, direction)
 
+    const transformValue =
+      direction === "left" || direction === "top" ? "100%" : "0px"
+
+    const x = isVertical(direction) ? "50%" : transformValue
+    const y = isVertical(direction) ? transformValue : "50%"
+
     set(drawerRef.current, {
-      transform: "translate3d(0, 0, 0)",
+      transform: `translate3d(${x}, ${y}, 0)`,
       transition: `transform ${TRANSITIONS.DURATION}s cubic-bezier(${TRANSITIONS.EASE.join(",")})`,
     })
 
@@ -749,8 +774,14 @@ export function Root({
     )
 
     const isHorizontalSwipe = direction === "left" || direction === "right"
+    const swipeToClose =
+      direction === "left" || direction === "top"
+        ? (isHorizontalSwipe ? visibleDrawerWidth : visibleDrawerHeight) -
+          swipeAmount
+        : swipeAmount
+
     if (
-      Math.abs(swipeAmount) >=
+      Math.abs(swipeToClose) >=
       (isHorizontalSwipe ? visibleDrawerWidth : visibleDrawerHeight) *
         closeThreshold
     ) {
@@ -791,22 +822,17 @@ export function Root({
 
     set(drawerRef.current, {
       transition: `transform ${TRANSITIONS.DURATION}s cubic-bezier(${TRANSITIONS.EASE.join(",")})`,
-      transform: isVertical(direction)
-        ? `scale(${scale}) translate3d(0, ${initialTranslate}px, 0)`
-        : `scale(${scale}) translate3d(${initialTranslate}px, 0, 0)`,
+      transform: `${getTransform(direction, initialTranslate)} scale(${scale})`,
     })
 
     if (!o && drawerRef.current) {
       nestedOpenChangeTimer.current = setTimeout(() => {
-        const translateValue = getTranslate(
-          drawerRef.current as HTMLElement,
-          direction
-        )
+        const translateValue =
+          getTranslate(drawerRef.current as HTMLElement, direction) || 0
+
         set(drawerRef.current, {
           transition: "none",
-          transform: isVertical(direction)
-            ? `translate3d(0, ${translateValue}px, 0)`
-            : `translate3d(${translateValue}px, 0, 0)`,
+          transform: getTransform(direction, translateValue),
         })
       }, 500)
     }
@@ -816,6 +842,7 @@ export function Root({
     _event: React.PointerEvent<HTMLDivElement>,
     percentageDragged: number
   ) {
+    if (direction === "center") return
     if (percentageDragged < 0) return
 
     const initialScale =
@@ -825,9 +852,7 @@ export function Root({
       -NESTED_DISPLACEMENT + percentageDragged * NESTED_DISPLACEMENT
 
     set(drawerRef.current, {
-      transform: isVertical(direction)
-        ? `scale(${newScale}) translate3d(0, ${newTranslate}px, 0)`
-        : `scale(${newScale}) translate3d(${newTranslate}px, 0, 0)`,
+      transform: `${getTransform(direction, newTranslate)} scale(${newScale})`,
       transition: "none",
     })
   }
@@ -836,6 +861,7 @@ export function Root({
     _event: React.PointerEvent<HTMLDivElement>,
     o: boolean
   ) {
+    if (direction === "center") return
     const dim = isVertical(direction) ? window.innerHeight : window.innerWidth
     const scale = o ? (dim - NESTED_DISPLACEMENT) / dim : 1
     const translate = o ? -NESTED_DISPLACEMENT : 0
@@ -843,9 +869,7 @@ export function Root({
     if (o) {
       set(drawerRef.current, {
         transition: `transform ${TRANSITIONS.DURATION}s cubic-bezier(${TRANSITIONS.EASE.join(",")})`,
-        transform: isVertical(direction)
-          ? `scale(${scale}) translate3d(0, ${translate}px, 0)`
-          : `scale(${scale}) translate3d(${translate}px, 0, 0)`,
+        transform: `${getTransform(direction, translate)} scale(${scale})`,
       })
     }
   }
@@ -858,6 +882,13 @@ export function Root({
       })
     }
   }, [modal])
+
+    React.useLayoutEffect(() => {
+    if (drawerRef.current) {
+      drawerRef.current.style.removeProperty("transform")
+      drawerRef.current.style.removeProperty("transition")
+    }
+  }, [direction])
 
   return (
     <Dialog.Root
@@ -984,6 +1015,21 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(function (
     React.useRef<React.PointerEvent<HTMLDivElement> | null>(null)
   const wasBeyondThePointRef = React.useRef(false)
   const hasSnapPoints = snapPoints && snapPoints.length > 0
+  const prevDirectionRef = React.useRef(direction)
+  const wasOpenRef = React.useRef(isOpen)
+  const isMorphing = React.useRef(false)
+
+  if (isOpen && wasOpenRef.current && prevDirectionRef.current !== direction) {
+    isMorphing.current = true
+  } else if (!isOpen) {
+    isMorphing.current = false
+  }
+
+  React.useEffect(() => {
+    prevDirectionRef.current = direction
+    wasOpenRef.current = isOpen
+  })
+
   useScaleBackground()
 
   const isDeltaInDirection = (
@@ -1032,8 +1078,11 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(function (
     <Dialog.Popup
       data-vaul-drawer-direction={direction}
       data-vaul-drawer=""
-      data-vaul-delayed-snap-points={delayedSnapPoints ? "true" : "false"}
-      data-vaul-snap-points={isOpen && hasSnapPoints ? "true" : "false"}
+      data-vaul-drawer-morphing={isMorphing.current ? "true" : "false"}
+      data-vaul-delayed-snap-points={
+        isOpen && delayedSnapPoints ? "true" : "false"
+      }
+      data-vaul-snap-points={hasSnapPoints ? "true" : "false"}
       data-vaul-custom-container={container ? "true" : "false"}
       data-vaul-animate={shouldAnimate?.current ? "true" : "false"}
       {...rest}

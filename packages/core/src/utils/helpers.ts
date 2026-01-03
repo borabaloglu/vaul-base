@@ -68,9 +68,24 @@ export const isVertical = (direction: DrawerDirection) => {
     case "left":
     case "right":
       return false
+    case "center":
+      return true
     default:
       return direction satisfies never
   }
+}
+
+export function getTransform(direction: DrawerDirection, translateValue: number) {
+  let x = isVertical(direction) ? "50%" : `${translateValue}px`
+  let y = isVertical(direction) ? `${translateValue}px` : "50%"
+
+  if (direction === "left") {
+    x = `calc(100% + ${translateValue}px)`
+  } else if (direction === "top") {
+    y = `calc(100% + ${translateValue}px)`
+  }
+
+  return `translate3d(${x}, ${y}, 0)`
 }
 
 export function getTranslate(

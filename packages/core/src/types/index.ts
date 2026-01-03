@@ -1,4 +1,4 @@
-export type DrawerDirection = "top" | "bottom" | "left" | "right"
+export type DrawerDirection = "top" | "bottom" | "left" | "right" | "center"
 export interface SnapPoint {
   fraction: number
   height: number
