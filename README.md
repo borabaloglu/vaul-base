@@ -41,7 +41,9 @@ function MyDrawerComponent() {
 
 [Here are additional examples](https://vaul-base.vercel.app/examples) demonstrating the component in use.
 
-### API Differences from Vaul
+### Documentation and API Differences from Vaul
+
+You can use original [Vaul documentation](https://vaul.emilkowal.ski/getting-started) for more information.
 
 Since vaul-base uses Base UI internally (instead of Radix UI), the following components are re-exported directly from [Base UI's Dialog](https://base-ui.com/react/components/dialog) and follow Base UI's Dialog API conventions:
 
